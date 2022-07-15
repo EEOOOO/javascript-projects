@@ -1,5 +1,5 @@
 let min = document.querySelector('.min');
-let startBtn = document.querySelector(".startButton");
+let startBtn = document.querySelector(".startButtpn");
 let stopBtn = document.querySelector('.stopBtn');
 let resetBtn = document.querySelector('.resetBtn');
 
