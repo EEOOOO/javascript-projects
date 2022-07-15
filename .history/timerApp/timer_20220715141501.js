@@ -25,7 +25,7 @@ function startTimer(){
     if (timer){
         clearInterval(timer);
     }
-    timer = setInterval(updateTimer, 1000);
+    timer = setInterval(updateTimer, 100);
 };
 function stopTimer() {
     clearInterval(timer);
@@ -42,7 +42,7 @@ function updateTimer(){
         changedSec = '00'
         changedMin = +min.textContent + 1
         if (changedMin < 10) {
-            changedMin = paddingZero(changedMin);
+            changedMin = paddingZero(changeMin);
         }
         min.textContent = changedMin;
     }

@@ -34,24 +34,10 @@ let resetTimer = () => {
 
 };
 function updateTimer(){
-    changedSec = +sec.textContent + 1
-    if (changedSec < 10) {
-        changedSec= paddingZero(changedSec);
-    }
-    else if ( 59 <= changedSec ) {
-        changedSec = '00'
-        changedMin = +min.textContent + 1
-        if (changedMin < 10) {
-            changedMin = paddingZero(changedMin);
-        }
-        min.textContent = changedMin;
-    }
-    sec.textContent = changedSec;
-    
-  
-}
-function paddingZero(timeContent) {
-    return '0'+ timeContent
+    console.log(min.innerHtml);
+
+
+
 }
 startBtn.addEventListener('click', function() {
     console.log('click start');

@@ -4,6 +4,7 @@ let startBtn = document.querySelector(".startButton");
 let stopBtn = document.querySelector('.stopBtn');
 let resetBtn = document.querySelector('.resetBtn');
 let timer;
+
 /* setInterval보다 setTimeout이 정확성이 더 좋다고 해서 nested setTimeout을 쓰고 싶은데 2번째
 nested되는 2번째 timer를 멈추지 못하게 하는게 까다롭네요.. 일단 setInterval로 구현해서 완성한 뒤
 고쳐보겠습니다. */ 
@@ -21,45 +22,26 @@ nested되는 2번째 timer를 멈추지 못하게 하는게 까다롭네요.. �
 
 // };
 
-function startTimer(){
-    if (timer){
-        clearInterval(timer);
-    }
-    timer = setInterval(updateTimer, 1000);
+let startTimer = (timer) => {
+    clearInterval(timer);
+    timer = setInterval(function updateTimer(){
+        console.log('tick!');
+    }, 1000);
 };
-function stopTimer() {
+let stopTimer = (timer) => {
     clearInterval(timer);
 };
 let resetTimer = () => {
 
 };
-function updateTimer(){
-    changedSec = +sec.textContent + 1
-    if (changedSec < 10) {
-        changedSec= paddingZero(changedSec);
-    }
-    else if ( 59 <= changedSec ) {
-        changedSec = '00'
-        changedMin = +min.textContent + 1
-        if (changedMin < 10) {
-            changedMin = paddingZero(changedMin);
-        }
-        min.textContent = changedMin;
-    }
-    sec.textContent = changedSec;
-    
-  
-}
-function paddingZero(timeContent) {
-    return '0'+ timeContent
-}
+
 startBtn.addEventListener('click', function() {
     console.log('click start');
-    startTimer();
+    startTimer(timer);
 });
 stopBtn.addEventListener('click', function() {
     console.log('click stop');
-    stopTimer();
+    stopTimer(timer);
 });
 resetBtn.addEventListener('click', function() {
     console.log('click reset');

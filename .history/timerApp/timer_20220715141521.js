@@ -25,7 +25,7 @@ function startTimer(){
     if (timer){
         clearInterval(timer);
     }
-    timer = setInterval(updateTimer, 1000);
+    timer = setInterval(updateTimer, 100);
 };
 function stopTimer() {
     clearInterval(timer);

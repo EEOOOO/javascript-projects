@@ -38,16 +38,15 @@ function updateTimer(){
     if (changedSec < 10) {
         changedSec= paddingZero(changedSec);
     }
-    else if ( 59 <= changedSec ) {
+    elif ( 59 <= changedSec ) {
         changedSec = '00'
         changedMin = +min.textContent + 1
         if (changedMin < 10) {
-            changedMin = paddingZero(changedMin);
+            changedMin = paddingZero(changeMin);
         }
-        min.textContent = changedMin;
     }
     sec.textContent = changedSec;
-    
+    min.textContent = changedMin;
   
 }
 function paddingZero(timeContent) {

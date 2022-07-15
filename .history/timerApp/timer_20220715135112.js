@@ -21,45 +21,28 @@ nested되는 2번째 timer를 멈추지 못하게 하는게 까다롭네요.. �
 
 // };
 
-function startTimer(){
+let startTimer = (timer) => {
     if (timer){
         clearInterval(timer);
     }
     timer = setInterval(updateTimer, 1000);
 };
-function stopTimer() {
+let stopTimer = (timer) => {
     clearInterval(timer);
 };
 let resetTimer = () => {
 
 };
 function updateTimer(){
-    changedSec = +sec.textContent + 1
-    if (changedSec < 10) {
-        changedSec= paddingZero(changedSec);
-    }
-    else if ( 59 <= changedSec ) {
-        changedSec = '00'
-        changedMin = +min.textContent + 1
-        if (changedMin < 10) {
-            changedMin = paddingZero(changedMin);
-        }
-        min.textContent = changedMin;
-    }
-    sec.textContent = changedSec;
-    
-  
-}
-function paddingZero(timeContent) {
-    return '0'+ timeContent
+    console.log('tick!');
 }
 startBtn.addEventListener('click', function() {
     console.log('click start');
-    startTimer();
+    startTimer(timer);
 });
 stopBtn.addEventListener('click', function() {
     console.log('click stop');
-    stopTimer();
+    stopTimer(timer);
 });
 resetBtn.addEventListener('click', function() {
     console.log('click reset');

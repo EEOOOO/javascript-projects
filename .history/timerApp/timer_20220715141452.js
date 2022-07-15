@@ -42,7 +42,7 @@ function updateTimer(){
         changedSec = '00'
         changedMin = +min.textContent + 1
         if (changedMin < 10) {
-            changedMin = paddingZero(changedMin);
+            changedMin = paddingZero(changeMin);
         }
         min.textContent = changedMin;
     }
