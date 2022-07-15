@@ -1,0 +1,22 @@
+body {
+  background-color: orange;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  border: 1px solid white;
+}
+ul li {
+  font-size: 5rem;
+  display: flex;
+  flex-wrap: wrap;
+  width: 3rem;
+  height: 2rem;
+}
