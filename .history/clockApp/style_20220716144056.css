@@ -1,0 +1,18 @@
+@font-face {
+  font-family: digital-clock-font;
+  src: url(put_the_location_to_your_font.ttf or .otf);
+}
+
+body {
+  background-color: black;
+}
+.time {
+  display: flex;
+  margin: auto;
+  top: 30%;
+}
+.time > span {
+  color: #40c4ff;
+  font-family: "digital-clock-font";
+  font-size: 2rem;
+}

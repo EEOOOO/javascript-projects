@@ -1,0 +1,7 @@
+body {
+  background-color: black;
+}
+.time > span {
+  color: blue;
+  font-family: "digital-clock";
+}

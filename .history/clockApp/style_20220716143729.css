@@ -1,0 +1,13 @@
+body {
+  background-color: black;
+}
+.time {
+  display: flex;
+  margin: auto;
+  top: 30%;
+}
+.time > span {
+  color: #40c4ff;
+  font-family: "digital-clock-font";
+  font-size: 2rem;
+}

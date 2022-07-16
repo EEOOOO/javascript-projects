@@ -1,0 +1,11 @@
+body {
+  background-color: black;
+}
+.time {
+  display: flex;
+  justify-content: center;
+}
+.time > span {
+  color: #40c4ff;
+  font-size: 2rem;
+}
