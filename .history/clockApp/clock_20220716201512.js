@@ -6,7 +6,8 @@ let ampm = document.querySelector('.ampm');
 
 function styleTime(time){
     if (time < 10){
-        return '0'+time
+        console.log(Number('0'+time))
+        return Number('0'+time)
     } else {
         return time
     }
@@ -14,6 +15,7 @@ function styleTime(time){
 setInterval(()=> {
     let date = new Date();
     let [currentHour, currentMin, currentSec] = [date.getHours(), date.getMinutes(), date.getSeconds()];
+    console.log(currentHour, currentMin, currentSec);
     if (12 < currentHour) {
         currentHour = currentHour - 12;
         ampm.textContent = 'pm';
@@ -22,7 +24,7 @@ setInterval(()=> {
     }
     hour.textContent = styleTime(currentHour);
     min.textContent = styleTime(currentMin);
-    sec.textContent = styleTime(currentSec);
+    sec.textConent = styleTime(currentSec);
 },1000)
 
 

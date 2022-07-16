@@ -20,6 +20,7 @@ setInterval(()=> {
     } else {
         ampm.textContent = 'am';
     }
+    console.log(currentSec);
     hour.textContent = styleTime(currentHour);
     min.textContent = styleTime(currentMin);
     sec.textContent = styleTime(currentSec);
