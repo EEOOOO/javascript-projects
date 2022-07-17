@@ -8,7 +8,7 @@ function styleTime(time){
     time = (time < 10) ? '0'+time : time;
     return time;
 }
-function showTime(){
+setInterval(()=> {
     let date = new Date();
     let [currentHour, currentMin, currentSec] = [date.getHours(), date.getMinutes(), date.getSeconds()];
     if (12 < currentHour) {
@@ -20,10 +20,7 @@ function showTime(){
     hour.textContent = styleTime(currentHour);
     min.textContent = styleTime(currentMin);
     sec.textContent = styleTime(currentSec);
-    
-    setTimeout(showTime, 1000);
-}
-showTime();
+},1000)
 
 
 

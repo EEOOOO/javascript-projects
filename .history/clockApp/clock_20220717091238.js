@@ -20,7 +20,6 @@ function showTime(){
     hour.textContent = styleTime(currentHour);
     min.textContent = styleTime(currentMin);
     sec.textContent = styleTime(currentSec);
-    
     setTimeout(showTime, 1000);
 }
 showTime();
