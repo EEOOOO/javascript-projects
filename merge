@@ -1,0 +1,14 @@
+*   [33m[2022-07-17][m [32m[ca77252][m | [37mMerge branch 'origin' of https://github.com/EEOOOO/javascript-projects into origin [1;31m{{WooYoon-local}}[m [34m (HEAD -> origin)[m
+[31m|[m[32m\[m  
+[31m|[m * [33m[2022-07-17][m [32m[473dd63][m | [37mCreate README.md [1;31m{{WooYoon Lee}}[m [34m (origin/origin)[m
+* [32m|[m [33m[2022-07-17][m [32m[9d95f83][m | [37mInit & Feat: Calculator App: create a whole calculator app [1;31m{{WooYoon-local}}[m [34m[m
+[32m|[m[32m/[m  
+* [33m[2022-07-17][m [32m[1d03268][m | [37mFix: Clock App: fix initial clock showing delay [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-07-16][m [32m[23a317c][m | [37mFeat: Clock App: make a clock work [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-07-16][m [32m[4c7bc69][m | [37mInit: Clock App: set content structure [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-07-15][m [32m[bb65dd7][m | [37mFeat: Timer App: add reset function on reset button [1;31m{{WooYoon-local}}[m [34m (main)[m
+* [33m[2022-07-15][m [32m[0742721][m | [37mFeat: Timer App: add start function on start button and add stop function on stop button [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-07-15][m [32m[de0d728][m | [37mFeat: Timer App: make all buttons could be clicked [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-07-15][m [32m[e02776d][m | [37mInit: Timer App: set content structure [1;31m{{WooYoon-local}}[m [34m[m
+* [33m[2022-07-15][m [32m[96611f4][m | [37mUpdate README.md [1;31m{{WooYoon Lee}}[m [34m (origin/main)[m
+* [33m[2022-07-15][m [32m[55f959e][m | [37mInitial commit [1;31m{{WooYoon Lee}}[m [34m[m
