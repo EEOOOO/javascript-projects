@@ -1,0 +1,1 @@
+let playGameBtn = document.querySelector('.playNewGameButton');

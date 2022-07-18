@@ -10,6 +10,7 @@ let colorBox = document.querySelectorAll(".colorBox");
 playGameBtn.addEventListener('click',()=>{
     console.log('play');
     initGame();
+    console.log(colorBox);
 });
 gameModes.addEventListener('click',(event)=>{
     if (event.target.tagName == 'SPAN'){
@@ -26,7 +27,7 @@ function initGame(){
     let answer = randomColors[0];
     rgbQuestion.textContent = answer;
     for (let i = 0; i < randomColors.length; i++){
-        colorBox[i].style.backgroundColor = randomColors[i];
+
     }
     // 그 중 마지막 색으로 헤더 색 변경
     let initHeaderColor = randomColors[randomColors.length-1];

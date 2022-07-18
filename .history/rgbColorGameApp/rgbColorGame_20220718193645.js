@@ -4,7 +4,6 @@ let header = document.querySelector('.header');
 let rgbQuestion = document.querySelector('.rgbQuestion');
 let gameModes = document.querySelector('.modes');
 let cssRoot = document.querySelector(":root");
-let colorBox = document.querySelectorAll(".colorBox");
 
 // playGameBtn누를 때, easy/hard누를 때 게임 초기화 시행
 playGameBtn.addEventListener('click',()=>{
@@ -25,12 +24,10 @@ function initGame(){
     // 그 중 첫 번째가 정답 색 , rgbQuestion 글자 넣어주기
     let answer = randomColors[0];
     rgbQuestion.textContent = answer;
-    for (let i = 0; i < randomColors.length; i++){
-        colorBox[i].style.backgroundColor = randomColors[i];
-    }
     // 그 중 마지막 색으로 헤더 색 변경
     let initHeaderColor = randomColors[randomColors.length-1];
-    cssRoot.style.setProperty('--color-now',initHeaderColor);
+    alert(cssRoot.style.getProperty('--color-now'));
+    cssRoot.style.setProperty = ('--color-now',initHeaderColor);
 }
 function makeRandomRGB(num){
     let randomColors = [];
