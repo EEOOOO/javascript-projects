@@ -1,0 +1,58 @@
+:root {
+  --color-now: #f060d6;
+}
+body {
+  width: 100%;
+  background-color: black;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  background-color: var(--color-now);
+}
+.headerMain {
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 0.3rem;
+}
+.headerMain .rgbQuestion {
+  font-size: 4rem;
+}
+.headerMain .gameTitle {
+  font-size: 1.5rem;
+}
+.headerButtons {
+  margin: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: var(--color-now);
+}
+.headerButtons li {
+  padding: 0.2rem 2rem;
+}
+.headerButtons li:hover {
+  background-color: var(--color-now);
+  color: white;
+}
+.boxes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 32rem;
+  margin: auto;
+}
+.colorBox {
+  background-color: var(--color-now);
+  width: 8rem;
+  height: 8rem;
+  border-radius: 10px;
+  margin: 1rem;
+}

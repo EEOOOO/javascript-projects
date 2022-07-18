@@ -1,0 +1,36 @@
+:root {
+  --color-now: #f060d6;
+}
+body {
+  width: 100%;
+  background-color: black;
+  margin: 0;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  background-color: var(--color-now);
+}
+.headerMain {
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.headerMain .rgbQuestion {
+  font-size: 5rem;
+}
+.headerButtons {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: var(--color-now);
+}
+.headerButtons li {
+  background-color: ;
+}

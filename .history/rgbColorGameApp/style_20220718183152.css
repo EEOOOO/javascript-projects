@@ -1,0 +1,24 @@
+:root {
+  --color-now: #f060d6;
+}
+body {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+}
+.headerButtons {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: white;
+  color: --color-now;
+}
+.headerButtons li {
+  background-color: ;
+}

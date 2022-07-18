@@ -1,0 +1,14 @@
+body {
+  width: 100%;
+  background-color: black;
+  color: white;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+}
+.headerButtons {
+  list-style: none;
+  display: flex;
+}
