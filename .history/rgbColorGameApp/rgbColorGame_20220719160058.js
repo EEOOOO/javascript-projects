@@ -44,7 +44,7 @@ function checkBoxIsAnswer(event, answer){
         }
     }
     else{
-        event.target.style.visibility = 'hidden';
+        event.target.style.visibility = 'none';
     }
 }
 function makeRandomRGB(num){

@@ -37,15 +37,7 @@ function setBoxes(randomColors, answer){
     }
 }
 function checkBoxIsAnswer(event, answer){
-    if (answer[0] == event.target.style.backgroundColor){
-        for (box of colorBox){
-            box.style.backgroundColor = answer[0];
-            cssRoot.style.cssText = `--color-now:${answer[0]}`;
-        }
-    }
-    else{
-        event.target.style.visibility = 'hidden';
-    }
+    console.log(answer[0] == event.target.style.backgroundColor);
 }
 function makeRandomRGB(num){
     let randomColors = [];

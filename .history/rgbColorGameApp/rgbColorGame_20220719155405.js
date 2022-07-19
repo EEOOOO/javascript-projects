@@ -23,7 +23,7 @@ function initGame(){
     let randomColors = makeRandomRGB(boxNum);
     
     // 그 중 하나 정답 색 , rgbQuestion 글자 넣어주기
-    let answer = randomColors[Math.floor(Math.random() * 6)];
+    let answer = Math.floor(Math.random() * 6);
     rgbQuestion.textContent = answer;
     setBoxes(randomColors, answer);
     // 그 중 마지막 색으로 헤더 색 변경
@@ -37,15 +37,9 @@ function setBoxes(randomColors, answer){
     }
 }
 function checkBoxIsAnswer(event, answer){
-    if (answer[0] == event.target.style.backgroundColor){
-        for (box of colorBox){
-            box.style.backgroundColor = answer[0];
-            cssRoot.style.cssText = `--color-now:${answer[0]}`;
-        }
-    }
-    else{
-        event.target.style.visibility = 'hidden';
-    }
+    console.dir(event.target.style.backgroundColor);
+    console.log(answer[0]);
+    console.log(answer[0] == event.target.style.backgroundColor);
 }
 function makeRandomRGB(num){
     let randomColors = [];

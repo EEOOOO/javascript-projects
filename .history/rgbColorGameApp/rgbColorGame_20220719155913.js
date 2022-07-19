@@ -40,11 +40,11 @@ function checkBoxIsAnswer(event, answer){
     if (answer[0] == event.target.style.backgroundColor){
         for (box of colorBox){
             box.style.backgroundColor = answer[0];
-            cssRoot.style.cssText = `--color-now:${answer[0]}`;
+            cssRoot.style['--color-now'] = answer[0];
         }
     }
     else{
-        event.target.style.visibility = 'hidden';
+        event.target.style.visibility = 'none';
     }
 }
 function makeRandomRGB(num){
