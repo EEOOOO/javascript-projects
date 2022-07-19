@@ -32,9 +32,8 @@ function initGame(){
 }
 function setBoxes(randomColors, answer){
     for (let i = 0; i < randomColors.length-1; i++){
-        colorBox[i].style.visibility = 'visible';
-        colorBox[i].style.backgroundColor = randomColors[i];
-        colorBox[i].addEventListener('click', event => checkBoxIsAnswer(event, answer));
+    colorBox[i].style.backgroundColor = randomColors[i];
+    colorBox[i].addEventListener('click', event => checkBoxIsAnswer(event, answer));
     }
 }
 function checkBoxIsAnswer(event, answer){
