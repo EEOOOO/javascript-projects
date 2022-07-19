@@ -21,16 +21,17 @@ function initGame(){
     // 랜덤 색 7개 뽑기
     let boxNum = 7
     let randomColors = makeRandomRGB(boxNum);
+    console.log(randomColors);
     // 그 중 첫 번째가 정답 색 , rgbQuestion 글자 넣어주기
     let answer = randomColors[0];
     rgbQuestion.textContent = answer;
-    for (let i = 0; i < randomColors.length-1; i++){
-        console.dir(colorBox[i]);
-        colorBox[i].style.backgroundColor = randomColors[i];
+    for (let i = 0; i < randomColors.length; i++){
+        console.log(colorBox[i]);
+        colorBox[i].setAttribute('style',`backgroundColor:${randomColors[i]}`);
     }
     // 그 중 마지막 색으로 헤더 색 변경
     let initHeaderColor = randomColors[randomColors.length-1];
-    cssRoot.style.setProperty('--color-now',initHeaderColor);
+    cssRoot.setProperty('--color-now',initHeaderColor);
 }
 function makeRandomRGB(num){
     let randomColors = [];

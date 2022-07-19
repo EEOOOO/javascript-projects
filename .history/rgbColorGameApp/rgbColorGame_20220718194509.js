@@ -21,11 +21,11 @@ function initGame(){
     // 랜덤 색 7개 뽑기
     let boxNum = 7
     let randomColors = makeRandomRGB(boxNum);
+    console.log(randomColors);
     // 그 중 첫 번째가 정답 색 , rgbQuestion 글자 넣어주기
     let answer = randomColors[0];
     rgbQuestion.textContent = answer;
-    for (let i = 0; i < randomColors.length-1; i++){
-        console.dir(colorBox[i]);
+    for (let i = 0; i < randomColors.length; i++){
         colorBox[i].style.backgroundColor = randomColors[i];
     }
     // 그 중 마지막 색으로 헤더 색 변경

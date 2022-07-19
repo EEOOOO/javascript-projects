@@ -8,7 +8,6 @@ let colorBox = document.querySelectorAll(".colorBox");
 
 // playGameBtn누를 때, easy/hard누를 때 게임 초기화 시행
 playGameBtn.addEventListener('click',()=>{
-    console.log('play');
     initGame();
 });
 gameModes.addEventListener('click',(event)=>{
@@ -21,16 +20,18 @@ function initGame(){
     // 랜덤 색 7개 뽑기
     let boxNum = 7
     let randomColors = makeRandomRGB(boxNum);
+    console.log(randomColors);
     // 그 중 첫 번째가 정답 색 , rgbQuestion 글자 넣어주기
-    let answer = randomColors[0];
-    rgbQuestion.textContent = answer;
-    for (let i = 0; i < randomColors.length-1; i++){
-        console.dir(colorBox[i]);
+    let answerColor = randomColors[0];
+    rgbQuestion.textContent = answerColor;
+    for (let i = 0; i < randomColors.length; i++){
         colorBox[i].style.backgroundColor = randomColors[i];
     }
     // 그 중 마지막 색으로 헤더 색 변경
     let initHeaderColor = randomColors[randomColors.length-1];
     cssRoot.style.setProperty('--color-now',initHeaderColor);
+
+    playGame(answerColor);
 }
 function makeRandomRGB(num){
     let randomColors = [];
@@ -52,8 +53,14 @@ function winGame(){
     // stateMessage변경 (correct)
     // 모든 박스 색 바꾸기
 }
-function playGame(){
+function playGame(answerColor){
     // 박스 눌리면 
+    console.log(answerColor);
+    for (let i = 0; i < colorBox.length(); i++){
+        colorBox.addEventListener('click',(event)=>{
+            console.log(event.target)
+        })
+    }
         // 정답인지 체크
         // 맞으면 winGame()
         // 아니면 stateMessage 변경 (try again), 그 박스 제거
