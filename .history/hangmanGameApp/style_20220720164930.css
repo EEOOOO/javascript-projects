@@ -1,0 +1,8 @@
+:root {
+  --light-green: #c1d72e;
+  --white: #fff;
+}
+body {
+  background-color: var(--light-green);
+  color: var(--white);
+}

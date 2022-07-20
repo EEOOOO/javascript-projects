@@ -1,0 +1,10 @@
+:root {
+  --light-green: #c1d72e;
+  --white: #fff;
+}
+body {
+  background-color: var(--light-green);
+  color: var(--white);
+  text-align: center;
+  letter-space: 3rem;
+}

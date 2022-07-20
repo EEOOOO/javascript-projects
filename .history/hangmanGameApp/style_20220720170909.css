@@ -1,0 +1,55 @@
+:root {
+  --light-green: #c1d72e;
+  --white: #fff;
+}
+body {
+  background-color: var(--light-green);
+  color: var(--white);
+  text-align: center;
+  font-size: 1rem;
+}
+h1 {
+  letter-spacing: 0.3rem;
+}
+.title {
+  font-weight: 300;
+}
+.alphabetContainer {
+  margin: auto;
+}
+.answerContainer {
+  margin: auto;
+}
+.hangmanContainer {
+  margin: auto;
+  width: 300px;
+  height: 200px;
+  border: 1px solid var(--white);
+}
+.buttons {
+  width: 50%;
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+.hint,
+.playAgain {
+  width: 40%;
+  background-color: transparent;
+  border: 1px solid var(--white);
+  border-radius: 4px;
+  padding: 1rem 1rem;
+  color: var(--white);
+  font-size: 1rem;
+  margin-top: 1rem;
+  transition: background-color 0.3s ease-in, color 0.3s ease-in;
+  cursor: pointer;
+}
+.hint:hover {
+  background-color: var(--white);
+  color: var(--light-green);
+}
+.playAgain:hover {
+  background-color: var(--white);
+  color: var(--light-green);
+}

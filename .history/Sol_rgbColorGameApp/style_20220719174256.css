@@ -1,0 +1,35 @@
+body {
+  background-color: #232323;
+  font-family: "Raleway", Sans-serif;
+  font-size: 62.5%; /* 1em = 10px */
+  margin: 0;
+}
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding-top:20px: ;
+}
+.square{
+  width:30%;
+  background-color:purple;
+  padding-bottom: 30%; /* 이거랑 width로 상자 만듦 */
+  float: left; /* 이걸로 가로로 띄움 */
+  margin:1.66%; // 당연히 간격 위해서
+  transition: background .5s;   // 각 transition 이름 뭘까
+  -webkit-transition: background;
+  -moz-transition: background;
+  o-transition: background;
+}
+h1 {
+  color: white;
+  background-color: #2c8299;
+  font-size:3.5rem;
+  text-align:center;
+  text-transform:uppercase; // 아.. 이런게 있구나 그놈의 대문자
+  margin: 0 0 0 0;
+  padding:10px 0;
+}
+.color-display{
+  display:block;
+  font-size:2em;
+}

@@ -1,0 +1,38 @@
+<ul id="container"></ul>
+
+<script>
+    let data = {
+        "Fish": {
+            "trout": {},
+            "salmon": {}
+        },
+
+        "Tree": {
+            "Huge": {
+            "sequoia": {},
+            "oak": {}
+            },
+            "Flowering": {
+            "apple tree": {},
+            "magnolia": {}
+            }
+        }
+    };
+    let container = document.getElementById('#container');
+    createTree(container, data);
+    function createTree(container, data){
+        if(data){
+            for (item of data){
+            let currentLevelList = document.createElement('li');
+            currentLevelList.textContent = item;
+            container.append(currentLevelList);
+            createTree(currentLevelList, data[item]);
+            }
+        }
+        else{
+            return
+        }
+        return
+    }
+
+</script>
