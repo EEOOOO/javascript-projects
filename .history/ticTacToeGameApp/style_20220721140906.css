@@ -12,6 +12,7 @@ body {
   align-items: center;
 }
 .gameBoard {
+  top: 100px;
   display: flex;
   flex-wrap: wrap;
   width: 50%;
@@ -37,17 +38,13 @@ body {
 .grid8 {
   border-radius: 0 0 20px 0;
 }
-.popUp {
+.introPopUp {
   position: absolute;
   background-color: white;
   border-radius: 30px;
   opacity: 0.8;
   padding: 1rem 4rem;
   text-align: center;
-  display: none;
-}
-.showPopUp {
-  display: block;
 }
 .button {
   background-color: white;

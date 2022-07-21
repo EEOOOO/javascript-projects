@@ -1,7 +1,7 @@
 let gameBoard = document.querySelector('.gameBoard');
 let grids = document.querySelectorAll('.grid');
 
-let popUp = document.querySelector('.popUp');
+let popUp = document.querySelector('.introPopUp');
 let buttons = document.querySelector('.buttonContainer');
 let xButton = document.querySelector('.markingX');
 let oButton = document.querySelector('.markingO');
@@ -20,7 +20,5 @@ buttons.addEventListener('click', event =>{
             computer['mark'] = 'X';
         }
     }
-    popUp.classList.remove("showPopUp");
-    console.log(popUp);
 });
 

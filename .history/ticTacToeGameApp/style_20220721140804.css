@@ -2,8 +2,6 @@
   box-sizing: border-box;
 }
 body {
-  margin: 0;
-  padding: 0;
   background-color: #e8eaf6;
   width: 100%;
   height: 100%;
@@ -17,6 +15,7 @@ body {
   width: 50%;
   height: 50%;
   margin: auto;
+  text-aline: center;
 }
 .gameBoard .grid {
   width: 30%;
@@ -37,17 +36,13 @@ body {
 .grid8 {
   border-radius: 0 0 20px 0;
 }
-.popUp {
+.introPopUp {
   position: absolute;
   background-color: white;
   border-radius: 30px;
   opacity: 0.8;
   padding: 1rem 4rem;
   text-align: center;
-  display: none;
-}
-.showPopUp {
-  display: block;
 }
 .button {
   background-color: white;

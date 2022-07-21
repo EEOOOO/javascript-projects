@@ -1,7 +1,7 @@
 let gameBoard = document.querySelector('.gameBoard');
 let grids = document.querySelectorAll('.grid');
 
-let popUp = document.querySelector('.popUp');
+let popUp = document.querySelector('.introPopUp');
 let buttons = document.querySelector('.buttonContainer');
 let xButton = document.querySelector('.markingX');
 let oButton = document.querySelector('.markingO');
@@ -12,15 +12,13 @@ computer = {}
 buttons.addEventListener('click', event =>{
     if (event.target.tagName === 'BUTTON'){
         if (event.target.textContent === 'X'){
-            user['mark'] = 'X';
-            computer['mark'] = 'O';
+            user[mark] = 'X';
+            computer[mark] = 'O';
         }
         else{
-            user['mark'] = 'O';
-            computer['mark'] = 'X';
+            user[mark] = 'O';
+            computer[mark] = 'X';
         }
     }
-    popUp.classList.remove("showPopUp");
-    console.log(popUp);
 });
 

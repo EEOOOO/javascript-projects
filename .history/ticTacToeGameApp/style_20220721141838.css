@@ -37,17 +37,16 @@ body {
 .grid8 {
   border-radius: 0 0 20px 0;
 }
-.popUp {
+.PopUp {
   position: absolute;
   background-color: white;
   border-radius: 30px;
   opacity: 0.8;
   padding: 1rem 4rem;
   text-align: center;
-  display: none;
 }
-.showPopUp {
-  display: block;
+.hidePopUp {
+  display: none;
 }
 .button {
   background-color: white;
