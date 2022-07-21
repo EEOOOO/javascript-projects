@@ -1,0 +1,16 @@
+body {
+  background-color: #e8eaf6;
+  text-align: center;
+}
+.gameBoard {
+  float: left;
+  width: 80%;
+  height: 70%;
+  margin: auto;
+}
+.gameBoard .grid {
+  width: 100px;
+  padding-bottom: 100px;
+  margin: 10px auto;
+  background-color: lightgrey;
+}

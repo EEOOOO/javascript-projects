@@ -1,0 +1,14 @@
+body {
+  background-color: #e8eaf6;
+}
+.gameBoard {
+  float: left;
+  width: 60%;
+  margin: auto;
+}
+.gameBoard .grid {
+  width: 100px;
+  padding-bottom: 100px;
+  margin: 10px auto;
+  background-color: lightgrey;
+}

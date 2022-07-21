@@ -1,0 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #e8eaf6;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.gameBoard {
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  height: 50%;
+  margin: auto;
+}
+.gameBoard .grid {
+  width: 30%;
+  padding-bottom: 30%;
+  border: 1px solid white;
+  background-color: lightgrey;
+  cursor: pointer;
+}

@@ -1,0 +1,17 @@
+body {
+  background-color: #e8eaf6;
+  display: float;
+  text-align: center;
+  margin: auto;
+}
+.gameBoard {
+  display: float;
+  justify-content: center;
+  align-items: center;
+}
+.gameBoard .grid {
+  width: 100px;
+  padding-bottom: 100px;
+  margin: 10px auto;
+  background-color: lightgrey;
+}
