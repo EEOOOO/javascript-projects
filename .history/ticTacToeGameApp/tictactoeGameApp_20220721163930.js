@@ -47,14 +47,12 @@ function userClickHandler(event){
         let num = gridClass.charAt(gridClass.length-1);
         drawMark(gridClass, num, user['mark']);
         user['clicked'].push(num);
-        console.log(user);
     }
 }
 function playComputer(){
     let num = getRandomNumber(notSelected);
     let gridClass = '.grid'+num;
-    computer['clicked'].push(num.toString());
-    console.log(computer);
+    computer['clicked'].push(num);
     drawMark(gridClass, num, computer['mark']);
     
 }

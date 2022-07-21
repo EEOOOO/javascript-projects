@@ -6,8 +6,8 @@ let buttons = document.querySelector('.buttonContainer');
 let xButton = document.querySelector('.markingX');
 let oButton = document.querySelector('.markingO');
 let notSelected = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-user = {'clicked':[]}
-computer = {'clicked':[]}
+user = {}
+computer = {}
 
 buttons.addEventListener('click', event =>{
     if (event.target.tagName === 'BUTTON'){
@@ -32,29 +32,23 @@ function startGame(){
         finishGame();
     }
     else{
-        alert('game');
         startGame();
     }
 }
 function playUser(){
-    gameBoard.addEventListener('click', event => userClickHandler(event), {once:true});
-
+    gameBoard.addEventListener('click', event => {
+        if (event.target.tagName === 'DIV'){
+            let gridClass = '.'+ event.target.classList[1];
+            let num = gridClass.charAt(gridClass.length-1);
+            drawMark(gridClass, num, user['mark']);
+        }
+    })
     return
-}
-function userClickHandler(event){
-    if (event.target.tagName === 'DIV'){
-        let gridClass = '.'+ event.target.classList[1];
-        let num = gridClass.charAt(gridClass.length-1);
-        drawMark(gridClass, num, user['mark']);
-        user['clicked'].push(num);
-        console.log(user);
-    }
 }
 function playComputer(){
     let num = getRandomNumber(notSelected);
     let gridClass = '.grid'+num;
-    computer['clicked'].push(num.toString());
-    console.log(computer);
+
     drawMark(gridClass, num, computer['mark']);
     
 }

@@ -46,15 +46,13 @@ function userClickHandler(event){
         let gridClass = '.'+ event.target.classList[1];
         let num = gridClass.charAt(gridClass.length-1);
         drawMark(gridClass, num, user['mark']);
-        user['clicked'].push(num);
-        console.log(user);
+        user['clicked'].append(num);
     }
 }
 function playComputer(){
     let num = getRandomNumber(notSelected);
     let gridClass = '.grid'+num;
-    computer['clicked'].push(num.toString());
-    console.log(computer);
+    computer['clicked'].append(num);
     drawMark(gridClass, num, computer['mark']);
     
 }

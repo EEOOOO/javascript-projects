@@ -53,7 +53,7 @@ function userClickHandler(event){
 function playComputer(){
     let num = getRandomNumber(notSelected);
     let gridClass = '.grid'+num;
-    computer['clicked'].push(num.toString());
+    computer['clicked'].push(str(num));
     console.log(computer);
     drawMark(gridClass, num, computer['mark']);
     
