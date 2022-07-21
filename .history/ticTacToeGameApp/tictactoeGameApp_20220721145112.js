@@ -5,7 +5,7 @@ let popUp = document.querySelector('.popUp');
 let buttons = document.querySelector('.buttonContainer');
 let xButton = document.querySelector('.markingX');
 let oButton = document.querySelector('.markingO');
-let notSelected = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
+let notSelected = [0,  6, 7, 8, 9];
 user = {}
 computer = {}
 
@@ -40,14 +40,7 @@ function playUser(){
 }
 function playComputer(){
     let num = getRandomNumber(notSelected);
-    let selectedGridClass = '.grid'+num;
-    let selectedGrid = document.querySelector(selectedGridClass);
-
-    let markingSpan = document.createElement('span');
-    markingSpan.textContent = computer['mark'];
-    selectedGrid.append(markingSpan);
-
-    notSelected.splice(num, 1);
+    console.log(num);
 }
 function getRandomNumber(remainNum){
     let num = Math.floor(Math.random()*9);

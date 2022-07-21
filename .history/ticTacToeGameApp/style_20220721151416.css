@@ -28,11 +28,10 @@ body {
 }
 .grid span {
   position: absolute;
-  left: 20%;
-  top: 4%;
-  font-size: 8em;
+  left: 30%;
+  top: 20%;
+  font-size: 30%;
   font-weight: 300;
-  font-style: italic;
 }
 .grid0 {
   border-radius: 20px 0 0 0;

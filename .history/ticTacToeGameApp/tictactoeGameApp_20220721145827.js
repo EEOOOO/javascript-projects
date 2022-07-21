@@ -40,14 +40,13 @@ function playUser(){
 }
 function playComputer(){
     let num = getRandomNumber(notSelected);
-    let selectedGridClass = '.grid'+num;
+    console.log(num);
+    let selectedGridClass = 'grid'+num;
+    console.log(selectedGrid);
     let selectedGrid = document.querySelector(selectedGridClass);
-
-    let markingSpan = document.createElement('span');
-    markingSpan.textContent = computer['mark'];
-    selectedGrid.append(markingSpan);
-
-    notSelected.splice(num, 1);
+    selectedGrid.textContent = computer['mark'];
+    notSelected = notSelected.splice(num, 1).concat(notSelected.splice(0, num))
+    console.log(notSelected)
 }
 function getRandomNumber(remainNum){
     let num = Math.floor(Math.random()*9);

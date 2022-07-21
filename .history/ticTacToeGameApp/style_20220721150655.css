@@ -24,15 +24,9 @@ body {
   border: 1px solid white;
   background-color: lightgrey;
   cursor: pointer;
-  position: relative;
-}
-.grid span {
-  position: absolute;
-  left: 20%;
-  top: 4%;
-  font-size: 8em;
-  font-weight: 300;
-  font-style: italic;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .grid0 {
   border-radius: 20px 0 0 0;

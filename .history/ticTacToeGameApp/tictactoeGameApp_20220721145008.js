@@ -40,22 +40,15 @@ function playUser(){
 }
 function playComputer(){
     let num = getRandomNumber(notSelected);
-    let selectedGridClass = '.grid'+num;
-    let selectedGrid = document.querySelector(selectedGridClass);
-
-    let markingSpan = document.createElement('span');
-    markingSpan.textContent = computer['mark'];
-    selectedGrid.append(markingSpan);
-
-    notSelected.splice(num, 1);
+    console.log(num);
 }
 function getRandomNumber(remainNum){
-    let num = Math.floor(Math.random()*9);
+    //let num = Math.floor(Math.random()*9);
+    let num = 11;
     if (remainNum.indexOf(num) !== -1){
         return num
-    } else {
-        return getRandomNumber(remainNum)
     }
+    else return 'x'
 }
 function checkWinner(){
     return true

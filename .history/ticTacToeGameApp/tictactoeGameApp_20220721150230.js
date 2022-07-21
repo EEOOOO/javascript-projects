@@ -44,9 +44,9 @@ function playComputer(){
     let selectedGrid = document.querySelector(selectedGridClass);
 
     let markingSpan = document.createElement('span');
-    markingSpan.textContent = computer['mark'];
+    markingSpan.setAttribute('textContent',computer['mark']);
     selectedGrid.append(markingSpan);
-
+    
     notSelected.splice(num, 1);
 }
 function getRandomNumber(remainNum){
