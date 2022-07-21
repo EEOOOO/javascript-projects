@@ -38,25 +38,24 @@ function startGame(){
 function playUser(){
     gameBoard.addEventListener('click', event => {
         if (event.target.tagName === 'DIV'){
-            let gridClass = '.'+ event.target.classList[1];
-            let num = gridClass.charAt(gridClass.length-1);
-            drawMark(gridClass, num, user['mark']);
+            let grid = event.target.classList[1];
+            let num = grid.charAt(grid.length-1);
+            drawMark(grid, num);
         }
     })
     return
 }
 function playComputer(){
     let num = getRandomNumber(notSelected);
-    let gridClass = '.grid'+num;
+    let selectedGridClass = '.grid'+num;
+    let selectedGrid = document.querySelector(selectedGridClass);
 
-    drawMark(gridClass, num, computer['mark']);
+    drawMark(selectedGrid, num);
     
 }
-function drawMark(gridClass, num, mark){
-    let grid = document.querySelector(gridClass);
+function drawMark(grid, num){
     let markingSpan = document.createElement('span');
-    markingSpan.textContent = mark;
-    
+    markingSpan.textContent = computer['mark'];
     grid.append(markingSpan);
 
     notSelected.splice(num, 1);

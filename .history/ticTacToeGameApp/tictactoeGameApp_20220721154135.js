@@ -38,9 +38,9 @@ function startGame(){
 function playUser(){
     gameBoard.addEventListener('click', event => {
         if (event.target.tagName === 'DIV'){
-            let gridClass = '.'+ event.target.classList[1];
-            let num = gridClass.charAt(gridClass.length-1);
-            drawMark(gridClass, num, user['mark']);
+            let gridClass = event.target.classList[1];
+            let num = gridClss.charAt(gridClass.length-1);
+            drawMark(gridClass, num);
         }
     })
     return
@@ -48,15 +48,15 @@ function playUser(){
 function playComputer(){
     let num = getRandomNumber(notSelected);
     let gridClass = '.grid'+num;
+    
 
-    drawMark(gridClass, num, computer['mark']);
+    drawMark(gridClass, num);
     
 }
-function drawMark(gridClass, num, mark){
+function drawMark(gridClass, num){
     let grid = document.querySelector(gridClass);
     let markingSpan = document.createElement('span');
-    markingSpan.textContent = mark;
-    
+    markingSpan.textContent = computer['mark'];
     grid.append(markingSpan);
 
     notSelected.splice(num, 1);

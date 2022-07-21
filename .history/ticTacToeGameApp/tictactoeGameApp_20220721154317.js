@@ -55,8 +55,8 @@ function playComputer(){
 function drawMark(gridClass, num, mark){
     let grid = document.querySelector(gridClass);
     let markingSpan = document.createElement('span');
-    markingSpan.textContent = mark;
     
+    markingSpan.textContent = mark;
     grid.append(markingSpan);
 
     notSelected.splice(num, 1);

@@ -48,7 +48,7 @@ function playUser(){
 function playComputer(){
     let num = getRandomNumber(notSelected);
     let gridClass = '.grid'+num;
-
+    
     drawMark(gridClass, num, computer['mark']);
     
 }
@@ -56,7 +56,6 @@ function drawMark(gridClass, num, mark){
     let grid = document.querySelector(gridClass);
     let markingSpan = document.createElement('span');
     markingSpan.textContent = mark;
-    
     grid.append(markingSpan);
 
     notSelected.splice(num, 1);

@@ -36,14 +36,16 @@ function startGame(){
     }
 }
 function playUser(){
-    gameBoard.addEventListener('click', event => {
-        if (event.target.tagName === 'DIV'){
-            let gridClass = '.'+ event.target.classList[1];
-            let num = gridClass.charAt(gridClass.length-1);
-            drawMark(gridClass, num, user['mark']);
-        }
-    })
+    gameBoard.addEventListener('click', userClickHandler(event));
+    gameBoard.removeEventListener('click',userClickHandler(event));
     return
+}
+function userClickHandler(event){
+    if (event.target.tagName === 'DIV'){
+        let gridClass = '.'+ event.target.classList[1];
+        let num = gridClass.charAt(gridClass.length-1);
+        drawMark(gridClass, num, user['mark']);
+    }
 }
 function playComputer(){
     let num = getRandomNumber(notSelected);
@@ -56,7 +58,7 @@ function drawMark(gridClass, num, mark){
     let grid = document.querySelector(gridClass);
     let markingSpan = document.createElement('span');
     markingSpan.textContent = mark;
-    
+
     grid.append(markingSpan);
 
     notSelected.splice(num, 1);
