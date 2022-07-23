@@ -37,14 +37,15 @@ buttons.addEventListener('click', event =>{
 let computerTurn = true;
 function startGame(){
     if(computerTurn) playComputer();
-    if(!computerTurn) playUser();  
+    if(!computerTurn) playUser();
+    
 }
 function playUser(){
     gameBoard.removeEventListener('click', userClickHandler);
     gameBoard.addEventListener('click', userClickHandler, {once:true});
     
 }
-function userClickHandler(event){
+async function userClickHandler(event){
     if (event.target.tagName === 'DIV'){
         let gridClass = '.'+ event.target.classList[1];
         let num = gridClass.charAt(gridClass.length-1);
@@ -55,10 +56,10 @@ function userClickHandler(event){
         if (checkWinner()){
             finishGame();
         } else {
+            startGame();
             computerTurn = true;
-            setTimeout(startGame,500);
         }
-    }
+
 }
 function playComputer(){
     let num = getRandomNumber(notSelected);
@@ -89,8 +90,6 @@ function checkWinner(){
     //if (computer['clicked'].indexOf('0') != -1){
       //  return true
     //}
-    console.log(`user ${user['clicked']}`);
-    console.log(`computer ${computer['clicked']}`);
     return false
 }
 function finishGame(){

@@ -56,9 +56,10 @@ function userClickHandler(event){
             finishGame();
         } else {
             computerTurn = true;
-            setTimeout(startGame,500);
+            setTimeout(startGame,1000);
         }
     }
+
 }
 function playComputer(){
     let num = getRandomNumber(notSelected);

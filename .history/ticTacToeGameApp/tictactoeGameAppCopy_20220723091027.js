@@ -7,14 +7,14 @@ let xButton = document.querySelector('.markingX');
 let oButton = document.querySelector('.markingO');
 let notSelected = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
 let winningSet = [
-    ['0', '1', '2'],
-    ['3', '4', '5'],
-    ['6', '7', '8'],
-    ['0', '3', '6'],
-    ['1', '4', '7'],
-    ['2', '5', '8'],
-    ['0', '4', '8'],
-    ['2', '4', '6']
+    [0, 1, 2],
+    [3, 4, 5],
+    [6, 7, 8],
+    [0, 3, 6],
+    [1, 4, 7],
+    [2, 5, 8],
+    [0, 4, 8],
+    [2, 4, 6]
 ];
 user = {'clicked':[]}
 computer = {'clicked':[]}
@@ -37,12 +37,19 @@ buttons.addEventListener('click', event =>{
 let computerTurn = true;
 function startGame(){
     if(computerTurn) playComputer();
-    if(!computerTurn) playUser();  
+    if(!computerTurn) playUser();
+    if (checkWinner()){
+        finishGame();
+    }
+    else{
+        startGame();
+    }
 }
 function playUser(){
-    gameBoard.removeEventListener('click', userClickHandler);
+    gameBoard.addEventListener('click', userClickHandler);
     gameBoard.addEventListener('click', userClickHandler, {once:true});
     
+    return
 }
 function userClickHandler(event){
     if (event.target.tagName === 'DIV'){
@@ -51,13 +58,7 @@ function userClickHandler(event){
         drawMark(gridClass, num, user['mark']);
         user['clicked'].push(num);
         console.log(user);
-        
-        if (checkWinner()){
-            finishGame();
-        } else {
-            computerTurn = true;
-            setTimeout(startGame,500);
-        }
+        computerTurn = true;
     }
 }
 function playComputer(){
@@ -86,15 +87,12 @@ function getRandomNumber(remainNum){
     }
 }
 function checkWinner(){
-    //if (computer['clicked'].indexOf('0') != -1){
-      //  return true
-    //}
-    console.log(`user ${user['clicked']}`);
-    console.log(`computer ${computer['clicked']}`);
+    if (computer['clicked'].indexOf('0') != -1){
+        return true
+    }
     return false
 }
 function finishGame(){
-    gameBoard.removeEventListener('click', userClickHandler);
     console.log('finish');
     return
 }

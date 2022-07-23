@@ -44,7 +44,7 @@ function playUser(){
     gameBoard.addEventListener('click', userClickHandler, {once:true});
     
 }
-function userClickHandler(event){
+async function userClickHandler(event){
     if (event.target.tagName === 'DIV'){
         let gridClass = '.'+ event.target.classList[1];
         let num = gridClass.charAt(gridClass.length-1);
@@ -55,10 +55,11 @@ function userClickHandler(event){
         if (checkWinner()){
             finishGame();
         } else {
+            startGame();
             computerTurn = true;
-            setTimeout(startGame,500);
         }
     }
+
 }
 function playComputer(){
     let num = getRandomNumber(notSelected);
