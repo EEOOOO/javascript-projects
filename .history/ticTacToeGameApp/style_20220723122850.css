@@ -35,16 +35,13 @@ body {
   font-style: italic;
   color: #424242;
 }
-.grid:hover {
-  background-color: #bdbdbd;
-}
 .grid0 {
   border-radius: 20px 0 0 0;
 }
 .grid2 {
   border-radius: 0 20px 0 0;
-  -webkit-box-shadow: 18px 7px 15px 0px #b4b4b4;
-  box-shadow: 18px 7px 15px 0px #b4b4b4;
+  -webkit-box-shadow: 18px 2px 15px 0px #b4b4b4;
+  box-shadow: 18px 2px 15px 0px #b4b4b4;
 }
 .grid5 {
   -webkit-box-shadow: 18px 2px 15px 0px #b4b4b4;
@@ -52,17 +49,13 @@ body {
 }
 .grid6 {
   border-radius: 0 0 0 20px;
-  -webkit-box-shadow: 4px 18px 15px 0px #b4b4b4;
-  box-shadow: 4px 18px 15px 0px #b4b4b4;
-}
-.grid7 {
-  -webkit-box-shadow: 4px 18px 15px 0px #b4b4b4;
-  box-shadow: 4px 18px 15px 0px #b4b4b4;
+  -webkit-box-shadow: 4px 8px 15px 0px #b4b4b4;
+  box-shadow: 4px 8px 15px 0px #b4b4b4;
 }
 .grid8 {
   border-radius: 0 0 20px 0;
-  -webkit-box-shadow: 11px 11px 15px 8px #b4b4b4;
-  box-shadow: 11px 11px 15px 8px #b4b4b4;
+  -webkit-box-shadow: 18px 8px 15px 0px #b4b4b4;
+  box-shadow: 18px 8px 15px 0px #b4b4b4;
 }
 .popUp {
   position: absolute;

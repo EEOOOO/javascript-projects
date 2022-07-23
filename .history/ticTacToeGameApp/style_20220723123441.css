@@ -36,7 +36,7 @@ body {
   color: #424242;
 }
 .grid:hover {
-  background-color: #bdbdbd;
+  transform: scale(1.01);
 }
 .grid0 {
   border-radius: 20px 0 0 0;

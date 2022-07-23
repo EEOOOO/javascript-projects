@@ -35,9 +35,6 @@ body {
   font-style: italic;
   color: #424242;
 }
-.grid:hover {
-  background-color: #bdbdbd;
-}
 .grid0 {
   border-radius: 20px 0 0 0;
 }

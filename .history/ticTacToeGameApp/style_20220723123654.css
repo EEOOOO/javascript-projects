@@ -29,7 +29,7 @@ body {
 .grid span {
   position: absolute;
   left: 20%;
-  top: 4%;
+  top: 10%;
   font-size: 8em;
   font-weight: 300;
   font-style: italic;

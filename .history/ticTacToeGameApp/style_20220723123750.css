@@ -17,6 +17,7 @@ body {
   width: 50%;
   height: 50%;
   margin: auto;
+  top: 30%;
 }
 .gameBoard .grid {
   width: 30%;

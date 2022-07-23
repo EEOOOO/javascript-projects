@@ -25,6 +25,7 @@ body {
   background-color: lightgrey;
   cursor: pointer;
   position: relative;
+  top: 10%;
 }
 .grid span {
   position: absolute;
