@@ -93,6 +93,7 @@ function checkWinner(clickedList){
         return false
     }
     for (set of winningSet){
+        let cnt = 0
         if (set.every(num => clickedList.indexOf(num) != -1)) {
             return true
         }

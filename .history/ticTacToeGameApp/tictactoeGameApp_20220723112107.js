@@ -79,6 +79,7 @@ function drawMark(gridClass, num, mark){
     grid.append(markingSpan);
     let numIndex = notSelected.indexOf(num);
     notSelected.splice(numIndex, 1);
+    console.log(notSelected);
 }
 function getRandomNumber(remainNum){
     let num = Math.floor(Math.random()*9);
@@ -93,7 +94,16 @@ function checkWinner(clickedList){
         return false
     }
     for (set of winningSet){
-        if (set.every(num => clickedList.indexOf(num) != -1)) {
+        let cnt = 0
+        console.log(set)
+        set.every(number => {
+            console.log(number);
+            if (clickedList.indexOf(number) != -1){
+                console.log(number)
+                cnt += 1
+            }
+        })
+        if (cnt === 3){
             return true
         }
     }
