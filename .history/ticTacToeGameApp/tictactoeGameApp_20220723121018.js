@@ -35,15 +35,14 @@ buttons.addEventListener('click', event =>{
         }
     }
     popUp.classList.remove("showPopUp");
-    initGame();
-    setTimeout(startGame,300);
+    //initGame();
+    startGame();
 });
 function initGame(){
     notSelected = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
     user['clicked'] = [];
     computer['clicked'] = [];
     computerTurn = true;
-    grids.forEach(grid => grid.textContent = '');
 }
 
 function startGame(){

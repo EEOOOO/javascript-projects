@@ -36,7 +36,7 @@ buttons.addEventListener('click', event =>{
     }
     popUp.classList.remove("showPopUp");
     initGame();
-    setTimeout(startGame,300);
+    startGame();
 });
 function initGame(){
     notSelected = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
@@ -44,6 +44,7 @@ function initGame(){
     computer['clicked'] = [];
     computerTurn = true;
     grids.forEach(grid => grid.textContent = '');
+    setTimeout(1000);
 }
 
 function startGame(){

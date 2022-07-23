@@ -21,7 +21,6 @@ let winningSet = [
 ];
 let user = {'clicked':[]}
 let computer = {'clicked':[]}
-let computerTurn = true;
 
 buttons.addEventListener('click', event =>{
     if (event.target.tagName === 'BUTTON'){
@@ -36,16 +35,14 @@ buttons.addEventListener('click', event =>{
     }
     popUp.classList.remove("showPopUp");
     initGame();
-    setTimeout(startGame,300);
+    startGame();
 });
 function initGame(){
     notSelected = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9];
-    user['clicked'] = [];
-    computer['clicked'] = [];
-    computerTurn = true;
-    grids.forEach(grid => grid.textContent = '');
+    user = {'clicked':[]}
+    computer = {'clicked':[]}
 }
-
+let computerTurn = true;
 function startGame(){
     if(computerTurn) playComputer();
     if(!computerTurn) playUser();  
