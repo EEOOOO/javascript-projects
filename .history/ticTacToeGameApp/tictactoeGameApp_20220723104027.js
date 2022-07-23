@@ -48,9 +48,10 @@ function userClickHandler(event){
     if (event.target.tagName === 'DIV'){
         let gridClass = '.'+ event.target.classList[1];
         let num = gridClass.charAt(gridClass.length-1);
+        drawMark(gridClass, Number(num), user['mark']);
         user['clicked'].push(num);
         console.log(`user ${user['clicked']}`);
-        drawMark(gridClass, Number(num), user['mark']);
+        console.log(notSelected);
         
         if (checkWinner()){
             finishGame();
@@ -66,6 +67,7 @@ function playComputer(){
     computer['clicked'].push(num.toString());
     console.log(`computer ${computer['clicked']}`);
     drawMark(gridClass, num, computer['mark']);
+    console.log(notSelected);
     computerTurn = false;    
 }
 function drawMark(gridClass, num, mark){
@@ -74,9 +76,8 @@ function drawMark(gridClass, num, mark){
     markingSpan.textContent = mark;
     
     grid.append(markingSpan);
-    let numIndex = notSelected.indexOf(num);
-    notSelected.splice(numIndex, 1);
-    console.log(notSelected);
+
+    notSelected.splice(num, 1);
 }
 function getRandomNumber(remainNum){
     let num = Math.floor(Math.random()*9);

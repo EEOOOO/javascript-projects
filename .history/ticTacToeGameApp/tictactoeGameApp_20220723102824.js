@@ -48,9 +48,9 @@ function userClickHandler(event){
     if (event.target.tagName === 'DIV'){
         let gridClass = '.'+ event.target.classList[1];
         let num = gridClass.charAt(gridClass.length-1);
+        drawMark(gridClass, num, user['mark']);
         user['clicked'].push(num);
-        console.log(`user ${user['clicked']}`);
-        drawMark(gridClass, Number(num), user['mark']);
+        console.log(user);
         
         if (checkWinner()){
             finishGame();
@@ -64,7 +64,6 @@ function playComputer(){
     let num = getRandomNumber(notSelected);
     let gridClass = '.grid'+num;
     computer['clicked'].push(num.toString());
-    console.log(`computer ${computer['clicked']}`);
     drawMark(gridClass, num, computer['mark']);
     computerTurn = false;    
 }
@@ -74,9 +73,8 @@ function drawMark(gridClass, num, mark){
     markingSpan.textContent = mark;
     
     grid.append(markingSpan);
-    let numIndex = notSelected.indexOf(num);
-    notSelected.splice(numIndex, 1);
-    console.log(notSelected);
+
+    notSelected.splice(num, 1);
 }
 function getRandomNumber(remainNum){
     let num = Math.floor(Math.random()*9);
@@ -87,14 +85,11 @@ function getRandomNumber(remainNum){
     }
 }
 function checkWinner(){
-    for (set of winningSet){
-        if (set in computer['clicked']){
-            console.log(set, computer['clicked']);
-        }
-        if (set in user['clicked']){
-            console.log(set, user['clicked']);
-        }
+    if (computer['clicked'].indexOf('0') != -1){
+      //  return true
     }
+    console.log(`user ${user['clicked']}`);
+    console.log(`computer ${computer['clicked']}`);
     return false
 }
 function finishGame(){

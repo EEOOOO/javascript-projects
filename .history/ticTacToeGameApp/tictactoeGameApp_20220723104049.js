@@ -74,8 +74,9 @@ function drawMark(gridClass, num, mark){
     markingSpan.textContent = mark;
     
     grid.append(markingSpan);
-    let numIndex = notSelected.indexOf(num);
-    notSelected.splice(numIndex, 1);
+
+    notSelected.splice(num, 1);
+    
     console.log(notSelected);
 }
 function getRandomNumber(remainNum){
