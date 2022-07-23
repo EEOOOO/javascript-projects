@@ -107,9 +107,6 @@ function checkWinner(clickedList){
             return true
         }
     }
-    if (user['clicked'].length + computer['clicked'].length == 9){
-        finishGame('Nobody');
-    }
     return false
 }
 function finishGame(winner){
@@ -124,10 +121,6 @@ function finishGame(winner){
         case 'You':
             popUpMessage.textContent = '';
             popUpStrongMessage.textContent = 'You were smarter than me! 😻😻'
-            break
-        case 'Nobody':
-            popUpMessage.textContent = '';
-            popUpStrongMessage.textContent = 'Cannot move 😵 Try Again 😟'
 
     }
     

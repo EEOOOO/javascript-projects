@@ -89,6 +89,9 @@ function drawMark(gridClass, num, mark){
     grid.append(markingSpan);
     let numIndex = notSelected.indexOf(num);
     notSelected.splice(numIndex, 1);
+    if (notSelected.length < 1){
+        finishGame('Nobody');
+    }
 }
 function getRandomNumber(remainNum){
     let num = Math.floor(Math.random()*9);
@@ -107,9 +110,6 @@ function checkWinner(clickedList){
             return true
         }
     }
-    if (user['clicked'].length + computer['clicked'].length == 9){
-        finishGame('Nobody');
-    }
     return false
 }
 function finishGame(winner){
@@ -127,7 +127,7 @@ function finishGame(winner){
             break
         case 'Nobody':
             popUpMessage.textContent = '';
-            popUpStrongMessage.textContent = 'Cannot move 😵 Try Again 😟'
+            popUpStrongMessage.textContent = 'Cannot move'
 
     }
     

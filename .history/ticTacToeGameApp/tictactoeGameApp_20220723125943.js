@@ -127,7 +127,7 @@ function finishGame(winner){
             break
         case 'Nobody':
             popUpMessage.textContent = '';
-            popUpStrongMessage.textContent = 'Cannot move 😵 Try Again 😟'
+            popUpStrongMessage.textContent = 'Cannot move'
 
     }
     
