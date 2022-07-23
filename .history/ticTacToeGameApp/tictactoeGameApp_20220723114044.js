@@ -3,7 +3,7 @@ let grids = document.querySelectorAll('.grid');
 
 let popUp = document.querySelector('.popUp');
 let popUpTitle = document.querySelector('.popUpTitle'); 
-let popUpMessage = document.querySelector('.popUpMessage');
+let  popUpMessage = document.querySelector('.popUpMessage');
 let popUpStrongMessage = document.querySelector('.popUpStrongMessage');
 let buttons = document.querySelector('.buttonContainer');
 let xButton = document.querySelector('.markingX');
@@ -34,6 +34,7 @@ buttons.addEventListener('click', event =>{
         }
     }
     popUp.classList.remove("showPopUp");
+    
     startGame();
 });
 let computerTurn = true;
@@ -104,18 +105,7 @@ function checkWinner(clickedList){
 function finishGame(winner){
     gameBoard.removeEventListener('click', userClickHandler);
 
-    popUpTitle.textContent = (`${winner} win!!`);
-    switch(winner){
-        case 'Computer':
-            popUpMessage.textContent = '';
-            popUpStrongMessage.textContent = 'I was smarter than you! 😈😈'
-            break
-        case 'You':
-            popUpMessage.textContent = '';
-            popUpStrongMessage.textContent = 'You were smarter than me! 😻😻'
-
-    }
-    
+    popUpTitle.textContent = (`${winner} win the Game!!`);
     popUp.classList.add("showPopUp");
     console.log('finish');
     return

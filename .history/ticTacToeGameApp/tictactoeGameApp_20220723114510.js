@@ -34,6 +34,7 @@ buttons.addEventListener('click', event =>{
         }
     }
     popUp.classList.remove("showPopUp");
+    
     startGame();
 });
 let computerTurn = true;
@@ -104,15 +105,15 @@ function checkWinner(clickedList){
 function finishGame(winner){
     gameBoard.removeEventListener('click', userClickHandler);
 
-    popUpTitle.textContent = (`${winner} win!!`);
+    popUpTitle.textContent = (`${winner} win the Game!!`);
     switch(winner){
         case 'Computer':
             popUpMessage.textContent = '';
-            popUpStrongMessage.textContent = 'I was smarter than you! 😈😈'
+            popUpStrongMessage.textContent = 'I was smarter than you! 👎👎'
             break
         case 'You':
             popUpMessage.textContent = '';
-            popUpStrongMessage.textContent = 'You were smarter than me! 😻😻'
+            popUpStrongMessage.textContent = 'You were smarter than me! 👍👍'
 
     }
     

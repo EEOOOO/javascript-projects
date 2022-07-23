@@ -2,9 +2,6 @@ let gameBoard = document.querySelector('.gameBoard');
 let grids = document.querySelectorAll('.grid');
 
 let popUp = document.querySelector('.popUp');
-let popUpTitle = document.querySelector('.popUpTitle'); 
-let popUpMessage = document.querySelector('.popUpMessage');
-let popUpStrongMessage = document.querySelector('.popUpStrongMessage');
 let buttons = document.querySelector('.buttonContainer');
 let xButton = document.querySelector('.markingX');
 let oButton = document.querySelector('.markingO');
@@ -34,6 +31,7 @@ buttons.addEventListener('click', event =>{
         }
     }
     popUp.classList.remove("showPopUp");
+    
     startGame();
 });
 let computerTurn = true;
@@ -55,7 +53,7 @@ function userClickHandler(event){
         drawMark(gridClass, Number(num), user['mark']);
         
         if (checkWinner(user['clicked'])){
-            finishGame('You');
+            finishGame();
         } else {
             computerTurn = true;
             setTimeout(startGame,500);
@@ -69,7 +67,7 @@ function playComputer(){
     console.log(`computer ${computer['clicked']}`);
     drawMark(gridClass, num, computer['mark']);
     if (checkWinner(computer['clicked'])){
-        finishGame('Computer');
+        finishGame();
     }
     computerTurn = false;    
 }
@@ -101,21 +99,8 @@ function checkWinner(clickedList){
     }
     return false
 }
-function finishGame(winner){
+function finishGame(){
     gameBoard.removeEventListener('click', userClickHandler);
-
-    popUpTitle.textContent = (`${winner} win!!`);
-    switch(winner){
-        case 'Computer':
-            popUpMessage.textContent = '';
-            popUpStrongMessage.textContent = 'I was smarter than you! 😈😈'
-            break
-        case 'You':
-            popUpMessage.textContent = '';
-            popUpStrongMessage.textContent = 'You were smarter than me! 😻😻'
-
-    }
-    
     popUp.classList.add("showPopUp");
     console.log('finish');
     return

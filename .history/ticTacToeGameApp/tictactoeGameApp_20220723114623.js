@@ -34,6 +34,7 @@ buttons.addEventListener('click', event =>{
         }
     }
     popUp.classList.remove("showPopUp");
+    
     startGame();
 });
 let computerTurn = true;
