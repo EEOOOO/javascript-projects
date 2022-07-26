@@ -53,7 +53,6 @@ for (card of cards){
     cardBox.addEventListener('click', () => {
         cardInner.classList.add('flipped');
         console.dir(cardBack);
-        startTimer();
     })
 }
 let timer;
@@ -61,27 +60,23 @@ function startTimer(){
   if (timer){
       clearInterval(timer);
   }
-  timer = setInterval(updateTimer, 100);
+  timer = setInterval(updateTimer, 1000);
 };
 function updateTimer(){
-  changedMiliSec = +milisec.textContent + 1
-  if (changedMiliSec < 10) {
-      changedMiliSec= paddingZero(changedMiliSec);
-  }
-  else if ( 59 <= changedMiliSec ) {
-      changedMiliSec = '00'
-      changedSec = +sec.textContent + 1
-      if (changedSec < 10) {
-          changedSec = paddingZero(changedSec);
-      }
-      sec.textContent = changedSec;
-  }
-  milisec.textContent = changedMiliSec;
-  
-
-}
-function paddingZero(timeContent) {
-  return '0'+ timeContent
+  changedSec = +sec.textContent + 1
+    if (changedSec < 10) {
+        changedSec= paddingZero(changedSec);
+    }
+    else if ( 59 <= changedSec ) {
+        changedSec = '00'
+        changedMin = +min.textContent + 1
+        if (changedMin < 10) {
+            changedMin = paddingZero(changedMin);
+        }
+        min.textContent = changedMin;
+    }
+    sec.textContent = changedSec;
+    
 }
 function checkWin(){
 

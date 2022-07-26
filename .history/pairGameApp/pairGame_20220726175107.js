@@ -61,24 +61,22 @@ function startTimer(){
   if (timer){
       clearInterval(timer);
   }
-  timer = setInterval(updateTimer, 100);
+  timer = setInterval(updateTimer, 1000);
 };
 function updateTimer(){
-  changedMiliSec = +milisec.textContent + 1
-  if (changedMiliSec < 10) {
-      changedMiliSec= paddingZero(changedMiliSec);
-  }
-  else if ( 59 <= changedMiliSec ) {
-      changedMiliSec = '00'
-      changedSec = +sec.textContent + 1
-      if (changedSec < 10) {
-          changedSec = paddingZero(changedSec);
-      }
-      sec.textContent = changedSec;
-  }
-  milisec.textContent = changedMiliSec;
-  
-
+  let changedSec = +sec.textContent + 1
+    if (changedSec < 10) {
+        changedSec= paddingZero(changedSec);
+    }
+    else if ( 59 <= changedSec ) {
+        changedMilSec = '00'
+        changedSec = +sec.textContent + 1
+        if (changedSec < 10) {
+            changedSec = paddingZero(changedSec);
+        }
+        min.textContent = changedMin;
+    }
+    sec.textContent = changedMilSec; 
 }
 function paddingZero(timeContent) {
   return '0'+ timeContent

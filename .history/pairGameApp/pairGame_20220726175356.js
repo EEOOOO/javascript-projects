@@ -61,7 +61,7 @@ function startTimer(){
   if (timer){
       clearInterval(timer);
   }
-  timer = setInterval(updateTimer, 100);
+  timer = setInterval(updateTimer, 1000);
 };
 function updateTimer(){
   changedMiliSec = +milisec.textContent + 1
