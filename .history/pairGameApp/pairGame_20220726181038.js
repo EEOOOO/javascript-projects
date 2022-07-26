@@ -7,6 +7,7 @@ let container = document.querySelector('.container');
 
 let cards = ['1','2','3','4','1','2','3','4']
 let counter = 0;
+
 cards = shuffle(cards);
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
@@ -51,13 +52,19 @@ for (card of cards){
     container.append(cardBox);
 
     cardBox.addEventListener('click', () => {
-      
         cardInner.classList.add('flipped');
         counter++;
-        console.dir(cardBack);
-        startTimer();
         win();
+        console.dir(cardBack);
+        let timer = startTimer();
     })
+}
+let win = function checkWin(){
+  console.log('checked');
+  console.log(counter);
+  if (counter == 8){
+    clearInterval(timer);
+  }
 }
 let timer;
 function startTimer(){
@@ -66,16 +73,6 @@ function startTimer(){
   }
   timer = setInterval(updateTimer, 100);
 };
-let win = function(){
-  console.log('checked');
-  console.log(counter);
-  if (counter == 8){
-    clearInterval(timer);
-    time.html = "";
-    finishTime = sec.textContent + 'sec ' + milisec.textContent + 'mili sec'
-    time.textContent = `${finishTime}이 걸려 성공했습니다.✨`;
-  }
-}
 function updateTimer(){
   changedMiliSec = +milisec.textContent + 1
   if (changedMiliSec < 10) {

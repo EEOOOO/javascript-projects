@@ -51,7 +51,6 @@ for (card of cards){
     container.append(cardBox);
 
     cardBox.addEventListener('click', () => {
-      
         cardInner.classList.add('flipped');
         counter++;
         console.dir(cardBack);

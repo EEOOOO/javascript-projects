@@ -51,7 +51,6 @@ for (card of cards){
     container.append(cardBox);
 
     cardBox.addEventListener('click', () => {
-      
         cardInner.classList.add('flipped');
         counter++;
         console.dir(cardBack);
@@ -73,7 +72,7 @@ let win = function(){
     clearInterval(timer);
     time.html = "";
     finishTime = sec.textContent + 'sec ' + milisec.textContent + 'mili sec'
-    time.textContent = `${finishTime}이 걸려 성공했습니다.✨`;
+    time.textContent = `${finishTime}가 걸려 성공했습니다.✨`;
   }
 }
 function updateTimer(){

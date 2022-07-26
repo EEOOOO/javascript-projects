@@ -51,12 +51,11 @@ for (card of cards){
     container.append(cardBox);
 
     cardBox.addEventListener('click', () => {
-      
         cardInner.classList.add('flipped');
         counter++;
+        win();
         console.dir(cardBack);
         startTimer();
-        win();
     })
 }
 let timer;
@@ -66,14 +65,12 @@ function startTimer(){
   }
   timer = setInterval(updateTimer, 100);
 };
-let win = function(){
+let win = function (){
   console.log('checked');
   console.log(counter);
   if (counter == 8){
+    console.log('win');
     clearInterval(timer);
-    time.html = "";
-    finishTime = sec.textContent + 'sec ' + milisec.textContent + 'mili sec'
-    time.textContent = `${finishTime}이 걸려 성공했습니다.✨`;
   }
 }
 function updateTimer(){
