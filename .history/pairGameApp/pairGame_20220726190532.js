@@ -52,17 +52,13 @@ for (card of cards){
     container.append(cardBox);
 
     cardBox.onclick = function() {
-        cardInner.classList.remove('reverse');
         cardInner.classList.add('flipped');
         counter++;
-        compareList.push(this);
-        setTimeout(()=>{
-          if (compareList.length > 1){
-            //console.dir(this);
-            checkCorrect(cardInner);
-          }
-        },1500);
-        //console.log(compareList);
+        compareList.push(this.textContent.slice(1));
+        if (compareList.length > 1){
+          checkCorrect(this);
+        }
+        console.log(compareList);
         startTimer();
         win();
     }
@@ -75,6 +71,8 @@ function startTimer(){
   timer = setInterval(updateTimer, 100);
 };
 let win = function(){
+  console.log('checked');
+  console.log(counter);
   if (counter == 8){
     clearInterval(timer);
     time.html = "";
@@ -102,15 +100,13 @@ function updateTimer(){
 function paddingZero(timeContent) {
   return '0'+ timeContent
 }
-function checkCorrect(){
-  if (compareList[0].textContent.slice(1) === compareList[1].textContent.slice(1)) {
+function checkCorrect(this){
+  if (compareList[0] === compareList[1]) {
     console.log('correct');
   }
   else{
-    for (comparedCard of compareList){
-      comparedCard.firstChild.classList.remove('flipped');
-      comparedCard.firstChild.classList.add('reverse');
-    }
+    this.classList.remove('flipped');
+    this.classList.add('reveresed');
   }
   compareList = [];
 }

@@ -56,12 +56,10 @@ for (card of cards){
         cardInner.classList.add('flipped');
         counter++;
         compareList.push(this);
-        setTimeout(()=>{
-          if (compareList.length > 1){
-            //console.dir(this);
-            checkCorrect(cardInner);
-          }
-        },1500);
+        if (compareList.length > 1){
+          //console.dir(this);
+          checkCorrect(cardInner);
+        }
         //console.log(compareList);
         startTimer();
         win();

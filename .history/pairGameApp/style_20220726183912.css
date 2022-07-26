@@ -82,7 +82,3 @@ h2 {
   transform-style: preserve-3d;
   transform: rotateY(180deg);
 }
-.reverse {
-  transform-style: preserve-3d;
-  transform: rotateY(0deg);
-}

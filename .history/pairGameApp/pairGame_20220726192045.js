@@ -57,11 +57,10 @@ for (card of cards){
         counter++;
         compareList.push(this);
         setTimeout(()=>{
-          if (compareList.length > 1){
-            //console.dir(this);
-            checkCorrect(cardInner);
-          }
-        },1500);
+        if (compareList.length > 1){
+          //console.dir(this);
+          checkCorrect(cardInner);
+        }},3000);
         //console.log(compareList);
         startTimer();
         win();

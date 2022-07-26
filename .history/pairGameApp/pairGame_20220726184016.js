@@ -7,7 +7,7 @@ let container = document.querySelector('.container');
 
 let cards = ['1','2','3','4','1','2','3','4']
 let counter = 0;
-let compareList = [];
+let compareList = []''
 cards = shuffle(cards);
 function shuffle(array) {
     let currentIndex = array.length,  randomIndex;
@@ -51,21 +51,14 @@ for (card of cards){
     cardBox.append(cardInner);
     container.append(cardBox);
 
-    cardBox.onclick = function() {
-        cardInner.classList.remove('reverse');
+    cardBox.addEventListener('click', () => {
         cardInner.classList.add('flipped');
         counter++;
-        compareList.push(this);
-        setTimeout(()=>{
-          if (compareList.length > 1){
-            //console.dir(this);
-            checkCorrect(cardInner);
-          }
-        },1500);
-        //console.log(compareList);
+        console.dir(cardBack);
+        checkCorrect();
         startTimer();
         win();
-    }
+    })
 }
 let timer;
 function startTimer(){
@@ -75,6 +68,8 @@ function startTimer(){
   timer = setInterval(updateTimer, 100);
 };
 let win = function(){
+  console.log('checked');
+  console.log(counter);
   if (counter == 8){
     clearInterval(timer);
     time.html = "";
@@ -103,16 +98,7 @@ function paddingZero(timeContent) {
   return '0'+ timeContent
 }
 function checkCorrect(){
-  if (compareList[0].textContent.slice(1) === compareList[1].textContent.slice(1)) {
-    console.log('correct');
-  }
-  else{
-    for (comparedCard of compareList){
-      comparedCard.firstChild.classList.remove('flipped');
-      comparedCard.firstChild.classList.add('reverse');
-    }
-  }
-  compareList = [];
+
 }
 
 

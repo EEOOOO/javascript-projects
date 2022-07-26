@@ -56,12 +56,10 @@ for (card of cards){
         cardInner.classList.add('flipped');
         counter++;
         compareList.push(this);
-        setTimeout(()=>{
-          if (compareList.length > 1){
-            //console.dir(this);
-            checkCorrect(cardInner);
-          }
-        },1500);
+        if (compareList.length > 1){
+          //console.dir(this);
+          checkCorrect(cardInner);
+        }
         //console.log(compareList);
         startTimer();
         win();
@@ -102,7 +100,7 @@ function updateTimer(){
 function paddingZero(timeContent) {
   return '0'+ timeContent
 }
-function checkCorrect(){
+function checkCorrect(card){
   if (compareList[0].textContent.slice(1) === compareList[1].textContent.slice(1)) {
     console.log('correct');
   }
