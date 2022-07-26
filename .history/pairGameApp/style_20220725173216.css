@@ -1,0 +1,9 @@
+body {
+  background-color: #f06292;
+  color: white;
+  text-align: center;
+}
+h3 {
+  font-weight: 300;
+  text-transfrom: upper-case;
+}

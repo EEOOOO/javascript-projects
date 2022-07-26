@@ -1,0 +1,22 @@
+body {
+  background-color: #f06292;
+  color: white;
+  text-align: center;
+}
+h1 {
+  font-weight: 300;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.time {
+  font-size: 2rem;
+}
+.container {
+  width: 300px;
+  display: flex;
+  float: left;
+}
