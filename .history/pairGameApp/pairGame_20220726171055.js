@@ -38,7 +38,7 @@ for (card of cards){
     cardFrontSpan.textContent = '?';
     cardFront.append(cardFrontSpan);
 
-    let cardBack = document.createElement('div');
+    let cardBack = document.createElement('Back');
     let cardBackSpan = document.createElement('span');
     cardBack.setAttribute('class','card-back');
     cardBackSpan.textContent = card;
@@ -51,7 +51,7 @@ for (card of cards){
     container.append(cardBox);
 
     cardBox.addEventListener('click', () => {
-        cardInner.classList.add('flipped');
+        cardBox.classList.add('flipped');
         console.dir(cardBack);
     })
 }

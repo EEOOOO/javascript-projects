@@ -51,8 +51,14 @@ for (card of cards){
     container.append(cardBox);
 
     cardBox.addEventListener('click', () => {
+      if (cardInner.classList.indexOf('flipped') == -1){
         cardInner.classList.add('flipped');
         console.dir(cardBack);
+      }
+      else {
+        cardInner.classList.remove('flipped');
+        cardInner.classList.add('reversed');
+      }
     })
 }
 

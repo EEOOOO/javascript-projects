@@ -38,10 +38,10 @@ h2 {
   text-align: center;
 }
 .card-front {
+  position: absolute;
   width: 100%;
   height: 100%;
-  //backface-visibility: hidden;
-  position: absolute;
+  backface-visibility: hidden;
   background-color: white;
   border-radius: 3px;
   border: 2px solid lightblue;
@@ -49,7 +49,6 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  //transform: rotateY(180deg);
 }
 .card-front span {
   color: #f06292;
@@ -57,10 +56,10 @@ h2 {
   font-size: 3rem;
 }
 .card-back {
-  position: absolute;
   width: 100%;
   height: 100%;
-  backface-visibility: hidden;
+  #backface-visibility: hidden;
+  position: absolute;
   top: 0;
   left: 0;
   background-color: lightblue;
@@ -70,7 +69,6 @@ h2 {
   display: flex;
   justify-content: center;
   align-items: center;
-  transform: rotateY(180deg);
 }
 .card-back span {
   color: "#00796b";

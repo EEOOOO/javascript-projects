@@ -29,29 +29,24 @@ function shuffle(array) {
 for (card of cards){
     let cardBox = document.createElement('div');
     cardBox.setAttribute('class','card');
-
-    let cardInner = document.createElement('div');
-    cardInner.setAttribute('class','card-inner');
     let cardFront = document.createElement('div');
     cardFront.setAttribute('class','card-front');
     let cardFrontSpan = document.createElement('span');
     cardFrontSpan.textContent = '?';
     cardFront.append(cardFrontSpan);
 
-    let cardBack = document.createElement('div');
+    let cardBack = document.createElement('Back');
     let cardBackSpan = document.createElement('span');
     cardBack.setAttribute('class','card-back');
     cardBackSpan.textContent = card;
     cardBack.append(cardBackSpan);
 
-    
-    cardInner.append(cardFront);
-    cardInner.append(cardBack);
-    cardBox.append(cardInner);
+    cardBox.append(cardFront);
+    cardBox.append(cardBack);
     container.append(cardBox);
 
     cardBox.addEventListener('click', () => {
-        cardInner.classList.add('flipped');
+        cardBox.classList.add('flipped');
         console.dir(cardBack);
     })
 }

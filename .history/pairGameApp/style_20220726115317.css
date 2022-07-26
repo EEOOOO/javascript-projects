@@ -1,0 +1,45 @@
+body {
+  background-color: #f06292;
+  color: white;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+h1 {
+  font-weight: 300;
+  letter-spacing: 0.5rem;
+  text-transform: uppercase;
+}
+h2 {
+  font-weight: 400;
+  text-transform: uppercase;
+}
+.time {
+  font-size: 2rem;
+}
+.container {
+  margin: auto;
+  text-align: center;
+  width: 80%;
+  display: flex;
+  float: left;
+}
+.card-front {
+  background-color: lightblue;
+  height: 90px;
+  width: 50px;
+  margin: 1rem;
+  display: block;
+  font-size: 2rem;
+  border-radius: 3px;
+  border: 2px solid white;
+  cursor: pointer;
+}
+.card span {
+  color: "#00796b";
+  display: inline-block;
+  margin-top: 20px;
+}
+.flipped {
+  visibility: hidden;
+}

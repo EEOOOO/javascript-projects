@@ -51,7 +51,7 @@ for (card of cards){
     container.append(cardBox);
 
     cardBox.addEventListener('click', () => {
-        cardInner.classList.add('flipped');
+        cardBox.classList.add('flipped');
         console.dir(cardBack);
     })
 }

@@ -21,6 +21,7 @@ h2 {
 .container {
   margin: auto;
   text-align: center;
+  width: 80%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -28,53 +29,37 @@ h2 {
 .card {
   transition: transfrom 1s;
   width: 100px;
-  height: 150px;
+  height: 700px;
   perspective: 1000px;
 }
 .card-inner {
   position: relative;
   width: 100%;
-  height: 100%;
   text-align: center;
 }
 .card-front {
+  //position: absolute;
   width: 100%;
-  height: 100%;
-  //backface-visibility: hidden;
-  position: absolute;
+  backface-visibility: hidden;
   background-color: white;
   border-radius: 3px;
   border: 2px solid lightblue;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  //transform: rotateY(180deg);
 }
 .card-front span {
   color: #f06292;
   font-weight: 800;
-  font-size: 3rem;
 }
 .card-back {
-  position: absolute;
   width: 100%;
-  height: 100%;
-  backface-visibility: hidden;
-  top: 0;
-  left: 0;
+  position: absolute;
   background-color: lightblue;
   border-radius: 3px;
   border: 2px solid white;
   cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transform: rotateY(180deg);
 }
 .card-back span {
   color: "#00796b";
-  font-size: 3rem;
 }
 .flipped {
   transform-style: preserve-3d;
