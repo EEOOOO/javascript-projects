@@ -54,17 +54,17 @@ for (card of cards){
     cardBox.onclick = function() {
         cardInner.classList.remove('reverse');
         cardInner.classList.add('flipped');
+        counter++;
         compareList.push(this);
         setTimeout(()=>{
           if (compareList.length > 1){
             //console.dir(this);
             checkCorrect(cardInner);
-            win();
           }
         },1500);
         //console.log(compareList);
         startTimer();
-        
+        win();
     }
 }
 let timer;
@@ -75,7 +75,6 @@ function startTimer(){
   timer = setInterval(updateTimer, 100);
 };
 let win = function(){
-  console.log(counter);
   if (counter == 4){
     clearInterval(timer);
     time.html = "";

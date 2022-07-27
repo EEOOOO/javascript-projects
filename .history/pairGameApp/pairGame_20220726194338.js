@@ -55,16 +55,14 @@ for (card of cards){
         cardInner.classList.remove('reverse');
         cardInner.classList.add('flipped');
         compareList.push(this);
-        setTimeout(()=>{
-          if (compareList.length > 1){
-            //console.dir(this);
-            checkCorrect(cardInner);
-            win();
-          }
-        },1500);
+        
+        if (compareList.length > 1){
+          //console.dir(this);
+          checkCorrect(cardInner);
+        }
         //console.log(compareList);
         startTimer();
-        
+        win();
     }
 }
 let timer;
@@ -108,10 +106,13 @@ function checkCorrect(){
     counter++;
   }
   else{
-    for (comparedCard of compareList){
-      comparedCard.firstChild.classList.remove('flipped');
-      comparedCard.firstChild.classList.add('reverse');
-    }
+    setTimeout(()=>{
+      for (comparedCard of compareList){
+
+        comparedCard.firstChild.classList.remove('flipped');
+        comparedCard.firstChild.classList.add('reverse');
+      }
+    },1500);
   }
   compareList = [];
 }
