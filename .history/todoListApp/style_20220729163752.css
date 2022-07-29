@@ -55,6 +55,7 @@ li {
   justify-content: space-between;
   border-radius: 40px;
   font-size: 1rem;
+  font-size: 1rem;
   padding: 1rem;
   box-shadow: 5px 5px 20px 7px rgba(221, 221, 221, 0.9);
 }
@@ -62,6 +63,7 @@ li {
   border: none;
   background-color: transparent;
   font-size: 1rem;
+  padding: 1rem;
 }
 .addButton {
   font-size: 1.5rem;

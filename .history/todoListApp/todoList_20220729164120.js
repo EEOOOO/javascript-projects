@@ -1,5 +1,5 @@
 let taskList = document.querySelector('.tasks');
-let addBtn = document.querySelector('.addButton');
+let addBtn = document.querySelector('addButton');
 
 addBtn.addEventListener('click', ()=>{
     let li = document.createElement('li');
@@ -15,6 +15,8 @@ addBtn.addEventListener('click', ()=>{
 
     li.append(inputTextBox);
     li.append(checkBox);
-
-    taskList.append(li);
 })
+<li class="task">
+                    <input type="textarea" value="Create New Project" class="inputTask"></input>
+                    <input type="checkbox" class="taskChecker">
+                </li>

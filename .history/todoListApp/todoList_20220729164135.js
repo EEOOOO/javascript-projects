@@ -1,5 +1,5 @@
 let taskList = document.querySelector('.tasks');
-let addBtn = document.querySelector('.addButton');
+let addBtn = document.querySelector('addButton');
 
 addBtn.addEventListener('click', ()=>{
     let li = document.createElement('li');
