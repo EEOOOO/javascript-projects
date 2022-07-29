@@ -4,8 +4,6 @@ let taskChecker = document.querySelector('.taskChecker');
 let taskCounter = document.querySelector('.taskCounter');
 let taskTotalNum = document.querySelector('.taskTotalNum');
 let completeNum = 0;
-let deleteBtn = document.querySelector('.deleteButton');
-
 
 taskTotalUpdate('0');
 
@@ -26,13 +24,12 @@ addBtn.addEventListener('click', ()=>{
     checkBox.setAttribute('type','checkbox');
     checkBox.setAttribute('class','texkChecker');
 
-    let deleteButton = document.createElement('button');
-    deleteButton.setAttribute('class','deleteButton');
-    deleteButton.textContent = '❌';
+    let trashImg = document.createElement('i');
+    trashImg.setAttribute('class',"fas fa-trash-can");
 
     li.append(inputTextBox);
+    li.append(trashImg);
     li.append(checkBox);
-    li.append(deleteButton);
 
     taskList.append(li);
     taskTotalUpdate(completeNum);
@@ -46,12 +43,5 @@ taskList.addEventListener('click', event => {
             completeNum -= 1
         }
         taskTotalUpdate(completeNum.toString());
-    }
-    if (event.target.tagName == 'BUTTON'){
-        if (event.target.parentElement.children[1].checked == true){
-            completeNum -= 1;
-        }
-        taskList.removeChild(event.target.parentElement);
-        taskTotalUpdate(completeNum);
     }
 })

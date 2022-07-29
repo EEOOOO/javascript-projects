@@ -68,12 +68,12 @@ li {
 .deleteButton {
   background: transparent;
   border: none;
-  border-radius: 3px;
-  //border: 1px solid var(--color-lightgray);
+  border-radius: 50%;
+  border: 0.3px solid var(--color-lightgray);
   padding: 1px;
   margin-left: 0.5rem;
   font-size: 0.3rem;
-  //box-shadow: 5px 5px 20px 7px rgba(221, 221, 221, 0.9);
+  box-shadow: 5px 5px 20px 7px rgba(221, 221, 221, 0.9);
   cursor: pointer;
 }
 .addButton {

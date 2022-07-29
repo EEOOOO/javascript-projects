@@ -48,7 +48,8 @@ taskList.addEventListener('click', event => {
         taskTotalUpdate(completeNum.toString());
     }
     if (event.target.tagName == 'BUTTON'){
-        if (event.target.parentElement.children[1].checked == true){
+        console.dir(event.target.parentElement);
+        if (event.target.checked == true){
             completeNum -= 1;
         }
         taskList.removeChild(event.target.parentElement);

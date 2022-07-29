@@ -14,6 +14,11 @@ function taskTotalUpdate(finishedTaskNum){
     taskTotalNum.textContent = taskList.children.length;
     taskCounter.append(taskTotalNum);
 }
+deleteBtn.addEventListener('click',event=>{
+    console.dir(event.target);
+    console.dir(deleteBtn);
+    taskList.removeChild(deleteBtn.parentElement);
+})
 addBtn.addEventListener('click', ()=>{
     let li = document.createElement('li');
     li.setAttribute('class','task');
@@ -47,11 +52,7 @@ taskList.addEventListener('click', event => {
         }
         taskTotalUpdate(completeNum.toString());
     }
-    if (event.target.tagName == 'BUTTON'){
-        if (event.target.parentElement.children[1].checked == true){
-            completeNum -= 1;
-        }
+    if (event.target.type == 'button'){
         taskList.removeChild(event.target.parentElement);
-        taskTotalUpdate(completeNum);
     }
 })

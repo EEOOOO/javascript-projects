@@ -47,11 +47,10 @@ taskList.addEventListener('click', event => {
         }
         taskTotalUpdate(completeNum.toString());
     }
-    if (event.target.tagName == 'BUTTON'){
-        if (event.target.parentElement.children[1].checked == true){
-            completeNum -= 1;
-        }
+    console.dir(event.target);
+    if (event.target.tagName == 'button'){
+        console.dir(event.target);
+        console.dir(event.target.parentElement);
         taskList.removeChild(event.target.parentElement);
-        taskTotalUpdate(completeNum);
     }
 })
