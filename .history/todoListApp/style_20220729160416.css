@@ -1,0 +1,49 @@
+:root {
+  --color-blue: #90caf9;
+  --color-white: #f5f5f5;
+  --color-lightgray: #c2c2c2;
+}
+body {
+  background-color: var(--color-blue);
+
+  text-align: center;
+}
+.container {
+  background-color: var(--color-white);
+  margin: 30px auto;
+  width: 40%;
+  border-radius: 10px;
+}
+.defaultIcons {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid var(--color-lightgray);
+  padding: 1rem;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+}
+.navbar i {
+  width: 20%;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+.navbar i:hover {
+  color: var(--color-blue);
+}
+.navbar .title {
+  width: 40%;
+  padding-left: 10%;
+  margin: 10px;
+  font-weight: 300;
+  font-size: 1.8rem;
+}
+ul {
+  padding: 0;
+}
+li {
+  list-style: none;
+  margin: 1rem 1.5rem;
+  text-align: left;
+}

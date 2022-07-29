@@ -1,0 +1,8 @@
+:root {
+  --color-blue: #90caf9;
+}
+body {
+  background-color: var(--color-blue);
+  margin: auto;
+  text-align: center;
+}

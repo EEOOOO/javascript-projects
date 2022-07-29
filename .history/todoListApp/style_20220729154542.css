@@ -1,0 +1,12 @@
+:root {
+  --color-blue: #90caf9;
+  --color-white: #f5f5f5;
+}
+body {
+  background-color: var(--color-blue);
+  margin: auto;
+  text-align: center;
+}
+.container {
+  background-color: var(--color-white);
+}
