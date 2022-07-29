@@ -3,7 +3,7 @@ let addBtn = document.querySelector('.addButton');
 let taskChecker = document.querySelector('.taskChecker');
 let taskCounter = document.querySelector('.taskCounter');
 let taskTotalNum = document.querySelector('.taskTotalNum');
-let completeNum = 0;
+let successNum = 0;
 
 taskTotalUpdate('0');
 
@@ -28,16 +28,16 @@ addBtn.addEventListener('click', ()=>{
     li.append(checkBox);
 
     taskList.append(li);
-    taskTotalUpdate(completeNum);
+    taskTotalUpdate(successNum);
 })
 taskList.addEventListener('click', event => {
     if (event.target.type == 'checkbox'){
         if(event.target.checked == true){
-            completeNum += 1;
+            successNum += 1;
         }
         else{
-            completeNum -= 1
+            successNum -= 1
         }
-        taskTotalUpdate(completeNum.toString());
+        taskTotalUpdate(successNum.toString());
     }
 })
