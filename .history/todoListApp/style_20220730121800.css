@@ -5,7 +5,7 @@
   --color-darkblue: #1565c0;
 }
 body {
-  background: linear-gradient(var(--color-blue), var(--color-darkblue));
+  background: linear-gradient(var(--color-blue), var(--color-darkblue), 30deg);
   height: 100vh;
   text-align: center;
 }
